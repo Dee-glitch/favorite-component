@@ -1,11 +1,6 @@
 import { FaHeart } from 'react-icons/fa';
 
 const ProductList = (props) => {
-  const handleClick = () => {
-    let r = { color: 'white' };
-    return r;
-  };
-
   return (
     <div className="product-list">
       {props.products &&
@@ -20,11 +15,7 @@ const ProductList = (props) => {
               <h2>{product.name}</h2>
               <p>{product.currentVariant.displayAttributes.color}</p>
               <div onClick={() => props.handleFavoritesClick(product)}>
-                <FaHeart
-                  style={{ color: 'red' }}
-                  className="icon"
-                  onClick={() => alert('hello')}
-                />
+                <FaHeart style={{ color: 'red' }} className="icon" />
               </div>
             </div>
           </div>

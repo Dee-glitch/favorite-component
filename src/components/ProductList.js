@@ -1,6 +1,8 @@
 import { FaHeart } from 'react-icons/fa';
 
 const ProductList = (props) => {
+  console.log(props.products);
+
   return (
     <div className="product-list">
       {props.products &&
