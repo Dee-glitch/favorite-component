@@ -1,6 +1,11 @@
+import { useContext } from 'react';
 import { FaHeart } from 'react-icons/fa';
+import { ProductContext } from '../context/GlobalContext';
 
-const ProductList = ({ products, isFaved, handleFavoritesClick }) => {
+const ProductList = () => {
+  const { products, isFavorite, addFavoriteProduct } =
+    useContext(ProductContext);
+
   const getImages = (product) => {
     const imageObj = product.currentVariant.images;
     const imageProp = Object.keys(imageObj)[0];
@@ -20,9 +25,9 @@ const ProductList = ({ products, isFaved, handleFavoritesClick }) => {
             <div>
               <h2>{product.name}</h2>
               <p>{product.currentVariant.displayAttributes.color}</p>
-              <div onClick={() => handleFavoritesClick(product)}>
+              <div onClick={() => addFavoriteProduct(product)}>
                 <FaHeart
-                  style={{ color: isFaved(product) ? 'red' : 'white' }}
+                  style={{ color: isFavorite(product) ? 'red' : 'white' }}
                   className="icon"
                 />
               </div>
