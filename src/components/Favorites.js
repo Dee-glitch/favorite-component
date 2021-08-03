@@ -1,6 +1,6 @@
 import { FaHeart } from 'react-icons/fa';
 
-const Favorites = (props) => {
+const Favorites = ({ products, handleFavoritesClick }) => {
   const getImages = (product) => {
     const imageObj = product.currentVariant.images;
     const imageProp = Object.keys(imageObj)[0];
@@ -8,8 +8,8 @@ const Favorites = (props) => {
   };
   return (
     <div className="product-list">
-      {props.products &&
-        props.products.map((product) => (
+      {products &&
+        products.map((product) => (
           <div key={product.id} className="product-container">
             <img
               alt={product.id}
@@ -19,7 +19,7 @@ const Favorites = (props) => {
             <div>
               <h2>{product.name}</h2>
               <p>{product.currentVariant.displayAttributes.color}</p>
-              <div onClick={() => props.handleFavoritesClick(product)}>
+              <div onClick={() => handleFavoritesClick(product)}>
                 <FaHeart style={{ color: 'red' }} className="icon" />
               </div>
             </div>
