@@ -1,6 +1,11 @@
 import { FaHeart } from 'react-icons/fa';
 
-const ProductList = (props) => {
+const Favorites = (props) => {
+  const getImages = (product) => {
+    const imageObj = product.currentVariant.images;
+    const imageProp = Object.keys(imageObj)[0];
+    return imageObj[imageProp].url;
+  };
   return (
     <div className="product-list">
       {props.products &&
@@ -9,7 +14,7 @@ const ProductList = (props) => {
             <img
               alt={product.id}
               style={{ width: '200px' }}
-              src={product.currentVariant.images.front}
+              src={getImages(product)}
             />
             <div>
               <h2>{product.name}</h2>
@@ -24,4 +29,4 @@ const ProductList = (props) => {
   );
 };
 
-export default ProductList;
+export default Favorites;

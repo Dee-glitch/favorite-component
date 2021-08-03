@@ -54,6 +54,11 @@ const App = () => {
     saveToLocalStorage(newFavoriteList);
   };
 
+  const isFavorite = (product) => {
+    const isFaved = favorites.some((fav) => fav.id === product.id);
+    return isFaved;
+  };
+
   return (
     <Router>
       <Header />
@@ -62,6 +67,7 @@ const App = () => {
           <ProductList
             products={products}
             handleFavoritesClick={addFavoriteProduct}
+            isFaved={isFavorite}
           />
         </Route>
         <Route exact path="/favorites">
