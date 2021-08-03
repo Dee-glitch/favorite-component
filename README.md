@@ -7,15 +7,8 @@ Here is a working like Demo, click on products to see all the products: https://
 How To Use
 To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. From your command line:
 
-# Clone this repository
-$ git clone https://github.com/Dee-glitch/favorite-component.git
-
-# Go into the repository
-$ cd favorite-component
-
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
+* $ git clone https://github.com/Dee-glitch/favorite-component.git
+* $ cd favorite-component
+* $ npm install
+* $ npm start
 
