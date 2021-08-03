@@ -15,7 +15,7 @@ const Favorites = () => {
       {favorites &&
         favorites.map((fav) => (
           <div key={fav.id} className="product-container">
-            <img alt={fav.id} style={{ width: '200px' }} src={getImages(fav)} />
+            <img alt={fav.id} style={{ width: '300px' }} src={getImages(fav)} />
             <div>
               <h2>{fav.name}</h2>
               <p>{fav.currentVariant.displayAttributes.color}</p>

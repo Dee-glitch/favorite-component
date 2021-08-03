@@ -19,7 +19,7 @@ const ProductList = () => {
           <div key={product.id} className="product-container">
             <img
               alt={product.id}
-              style={{ width: '200px' }}
+              style={{ width: '300px' }}
               src={getImages(product)}
             />
             <div>
