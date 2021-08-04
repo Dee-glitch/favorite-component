@@ -68,6 +68,7 @@ header a:hover {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
 }
+
 .icon {
   cursor: pointer;
   position: absolute;
@@ -76,10 +77,3 @@ header a:hover {
   z-index: 2;
 }
 
-.icon-true {
-  color: white;
-}
-
-.icon-false {
-  color: red;
-}

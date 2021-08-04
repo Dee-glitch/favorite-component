@@ -7,19 +7,16 @@ const ProductProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    let availableProducts = [];
     fetch(
       'https://www.aceandtate.show/torii/catalog/v1/products/frames?country-code=nl&language-code=en',
     )
       .then((response) => response.json())
       .then((data) => {
-        data.data.forEach((product) => {
-          if (product.currentVariant.availability.isAvailableOnline) {
-            availableProducts.push(product);
-          }
+        let availableProducts = data.data.filter((product) => {
+          return product.currentVariant.availability.isAvailableOnline;
         });
-      })
-      .then((availableData) => setProducts(availableProducts));
+        setProducts(availableProducts);
+      });
   }, []);
 
   useEffect(() => {

@@ -1,15 +1,10 @@
 import { FaHeart } from 'react-icons/fa';
 import { useContext } from 'react';
 import { ProductContext } from '../context/GlobalContext';
+import { getImages } from './helpers';
 
 const Favorites = () => {
   const { favorites, removeFavoriteProduct } = useContext(ProductContext);
-
-  const getImages = (product) => {
-    const imageObj = product.currentVariant.images;
-    const imageProp = Object.keys(imageObj)[0];
-    return imageObj[imageProp].url;
-  };
   return (
     <div className="product-list">
       {favorites &&
