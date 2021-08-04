@@ -4,7 +4,7 @@ Here is a working Demo, click on products to see all the products: https://dee-g
 
 ![image](https://user-images.githubusercontent.com/71313732/127999116-7e1707ab-5e95-40dc-a5af-2d7619acb391.png)
 
-How To Use
+How To Use <br>
 To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. From your command line:
 
 * $ git clone https://github.com/Dee-glitch/favorite-component.git
